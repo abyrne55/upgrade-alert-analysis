@@ -1,0 +1,11 @@
+"""
+Commonly-used constants throughout upgrade-alert-analysis
+
+Copy this template to `<repo_root>/settings.py` and fill in the values below
+"""
+
+# URL for querying the Observatorium-MST API (should end in "?query=")
+OBSERVATORIUM_URL="https://observatorium.example.com/api/metrics/v1/abc/api/v1/query?query="
+
+# URL for querying Telemeter API; specifically "lts" or "historical" (should be a bare URL, no path at the end)
+TELEMETER_URL="https://telemeter.example.com"
