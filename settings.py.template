@@ -7,5 +7,18 @@ Copy this template to `<repo_root>/settings.py` and fill in the values below
 # URL for querying the Observatorium-MST API (should end in "?query=")
 OBSERVATORIUM_URL="https://observatorium.example.com/api/metrics/v1/abc/api/v1/query?query="
 
+# Observatorium-MST authentication cookie. You can fetch this manually by loading the
+# above URL in your browser and going through the authentication process. Once you
+# reach the query response page (any response is okay as long as it's not "token not 
+# found"), open your browser's dev-tools (usually Ctrl-Shift-C), open the Network tab,
+# and find Cookies. Look for a cookie starting with "observatorium_" and copy the name
+# and paste below, replacing the "observatorium_abc" key. Do the same for the value of
+# the cookie ("aslkdjjoiaewhgjkadsf..."). Unfortunately, these seem to be pretty short-
+# lived tokens, so you might consider adding "import os" to this file and replacing the
+# token value below with os.environ.get("OBSERVATORIUM_AUTH_COOKIE") so you can set an
+# environmental variable instead of changing this file repeatedly
+OBSERVATORIUM_AUTH_COOKIE={"observatorium_abc": "aslkdjjoiaewhgjkadsf..."}
+
 # URL for querying Telemeter API; specifically "lts" or "historical" (should be a bare URL, no path at the end)
 TELEMETER_URL="https://telemeter.example.com"
+
