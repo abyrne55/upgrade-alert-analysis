@@ -19,6 +19,9 @@ OBSERVATORIUM_URL="https://observatorium.example.com/api/metrics/v1/abc/api/v1/q
 # environmental variable instead of changing this file repeatedly
 OBSERVATORIUM_AUTH_COOKIE={"observatorium_abc": "aslkdjjoiaewhgjkadsf..."}
 
-# URL for querying Telemeter API; specifically "lts" or "historical" (should be a bare URL, no path at the end)
-TELEMETER_URL="https://telemeter.example.com"
+# URL for querying Telemeter API; specifically "lts" or "historical" (should end in "?query=")
+TELEMETER_URL="https://telemeter.example.com/api/v1/query?query="
 
+# Telemeter authentication cookie. Same instructions as OBSERVATORIUM_AUTH_COOKIE
+# above, except the cookie name will likely be something like "_oauth_proxy" 
+TELEMETER_AUTH_COOKIE={"_oauth_proxy": "aslkdjjoiaewhgjkadsf..."}
