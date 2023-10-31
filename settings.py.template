@@ -29,3 +29,6 @@ TELEMETER_AUTH_COOKIE={"_oauth_proxy": "aslkdjjoiaewhgjkadsf..."}
 # Path to the Root CA for Telemeter's SSL cert. Only useful if your Telemeter uses a
 # self-signed cert.
 TELEMETER_CA_BUNDLE_PATH="/etc/pki/ca-trust/source/anchors/My-Root-CA.pem"
+
+# Names of alerts to ignore
+IGNORED_ALERTS = ["AlertmanagerSilencesActiveSRE", "Watchdog", "ArgoCDSyncAlert", "UpdateAvailable", "ClusterNotUpgradeable"]
